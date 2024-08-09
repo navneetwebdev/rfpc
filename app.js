@@ -3,7 +3,7 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 const mongoose = require('mongoose')
-const {MONGOURI} = require('./keys')
+const {MONGOURI} = require('./config/keys')
 mongoose.connect(MONGOURI)
 mongoose.connection.on('connected', ()=>{
 	console.log('connected to mongo')
